@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="17dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="17dp"
+    android:layout_marginBottom="16dp"
+    android:background="#B59494">
+
+
+    <ImageView
+        android:id="@+id/firstPattyImage"
+        android:layout_width="55dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/burger" />
+
+    <TextView
+        android:id="@+id/pattyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:text="Title"
+        android:textColor="#443E50"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/firstPattyImage"
+        app:layout_constraintTop_toTopOf="@+id/firstPattyImage" />
+
+    <ImageButton
+        android:id="@+id/plusSign"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:onClick="plusSign"
+        app:layout_constraintBottom_toBottomOf="@+id/pattyQuantity"
+        app:layout_constraintStart_toEndOf="@+id/pattyQuantity"
+        app:layout_constraintTop_toTopOf="@+id/pattyQuantity"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageButton
+        android:id="@+id/minusSign"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="6dp"
+        android:onClick="minusSign"
+        app:layout_constraintBottom_toBottomOf="@+id/firstPattyImage"
+        app:layout_constraintStart_toEndOf="@+id/firstPattyImage"
+        app:srcCompat="@drawable/minus"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/pattyQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="0"
+        android:textColor="#443E50"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/minusSign"
+        app:layout_constraintStart_toEndOf="@+id/minusSign"
+        app:layout_constraintTop_toTopOf="@+id/minusSign" />
+
+    <TextView
+        android:id="@+id/perPattyPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="0"
+        android:textColor="#443E50"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/pattyTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pattyTitle" />
+
+    <TextView
+        android:id="@+id/Currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="RM"
+        android:textColor="#443E50"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/perPattyPrice"
+        app:layout_constraintEnd_toStartOf="@+id/perPattyPrice"
+        app:layout_constraintTop_toTopOf="@+id/perPattyPrice" />
+
+    <TextView
+        android:id="@+id/Currency2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:text="RM"
+        android:textColor="#443E50"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/plusSign"
+        app:layout_constraintStart_toEndOf="@+id/plusSign"
+        app:layout_constraintTop_toTopOf="@+id/plusSign" />
+
+    <TextView
+        android:id="@+id/totalPattyPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="0"
+        android:textColor="#443E50"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Currency2"
+        app:layout_constraintStart_toEndOf="@+id/Currency2"
+        app:layout_constraintTop_toTopOf="@+id/Currency2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
